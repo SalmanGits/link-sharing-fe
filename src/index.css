@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+
+*{
+  margin:0;padding:0;box-sizing:border-box;
+  font-family: 'Poppins', sans-serif;
+}
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  background-color: #d2cbc1;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.parent{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 50vh;
+  width: 15vw; 
+  margin: auto;
+  background-color: #858666;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-content {
+
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  flex-direction: column;
+  gap: 14px;
+}
+.card-content p{
+  color: red;
+}
+.link-parent{
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  width: 100%;
+  gap: 5px;
+  margin-top: -7px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.start-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #d2cbc1;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contact-form {
+  width: 80%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.form-button {
+  background-color: #d2cbc1;
+  color: #000;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.form-button:hover {
+  background-color: rgb(11, 49, 74);
+}
+
+
+
+@media (max-width: 600px) {
+  .card {
+      width: 50vw;
+  }
+}
+.span-parent{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.one{
+  width: 150px;
+  margin-bottom: 10px;
+
+}
+.two{
+  width: 150px;
+}
+
+.link-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#link-input {
+  margin-bottom: 10px;
+}
+
+.link-buttons button {
+  margin-right: 10px;
+}
+
