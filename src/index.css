@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
 
-
+@font-face {
+  font-family: myFirstFont;
+  src: url(Achafita.ttf);
+}
 *{
   margin:0;padding:0;box-sizing:border-box;
   font-family: 'Poppins', sans-serif;
@@ -9,7 +12,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  background-color: #d2cbc1;
+  background-color: #8fa9b5;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -154,4 +157,42 @@ textarea {
 .link-buttons button {
   margin-right: 10px;
 }
+.wonderland-p{
+  display: flex;
+  position: absolute;
+  left: 30%;
+  top: 40%;
+  font-size: 30px;
+  font-weight: 600;
+  color: #355e73;
+  /* font-family: myFirstFont; */
+}
+.snow-image{
+  margin-top: 171px;
+}
 
+.button-home {
+  background: #355e73;;
+  border-radius: 999px;
+  box-shadow: 0 0 20px 0px #355e73;
+  /* box-shadow: #5E5DF0 0 10px 20px -10px; */
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  /* font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif; */
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 13px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 200px;
+  word-break: break-word;
+  border: 0;
+  position: absolute;
+  left: 28%;
+    top: 41%;
+}

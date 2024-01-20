@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import snow from "../assets/snow2.png"
 import { url } from './service'
 import { RWebShare } from "react-web-share";
 
@@ -46,9 +47,13 @@ const Home = () => {
     console.log(sharingLink)
     return (
         <div className="parent">
+            <div className="main-content">
+                {/* <p className="wonderland-p">Wonderland</p> */}
+                <button className="button-home">Get Started</button>
+                <img className='snow-image' src={snow} alt="snow" />
+            </div>
 
-
-            <div className="card">
+            {/* <div className="card">
 
                 <div className="card-content">
                     <p>{message}</p>
@@ -57,10 +62,7 @@ const Home = () => {
                             <div className='input-parent'>
                                 <input id="link-input" type="text" value={link || link1} readOnly />
                             </div>
-                            {/* <div className="link-buttons">
-                                <button onClick={handleCopy}>Copy</button>
-                                <button onClick={handleShare}>Share</button>
-                            </div> */}
+               
                             <RWebShare
                                 data={{
                                     text: "",
@@ -78,10 +80,8 @@ const Home = () => {
                         <button onClick={handleNavigate} className="start-button two">my responses</button>
                     </div>
                 </div>
-                {/* <div className="card-footer">
-                    <button onClick={() => navigate(`/form/${link}`)} className="start-button">Start</button>
-                </div> */}
-            </div>
+
+            </div> */}
         </div>
     )
 }
