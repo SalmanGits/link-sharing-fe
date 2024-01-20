@@ -167,19 +167,20 @@ textarea {
   color: #355e73;
   /* font-family: myFirstFont; */
 }
-.snow-image{
-  margin-top: 171px;
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .button-home {
-  background: #355e73;;
+  background: #355e73;
   border-radius: 999px;
   box-shadow: 0 0 20px 0px #355e73;
-  /* box-shadow: #5E5DF0 0 10px 20px -10px; */
-  box-sizing: border-box;
   color: #fff;
   cursor: pointer;
-  /* font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif; */
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
@@ -193,6 +194,39 @@ textarea {
   word-break: break-word;
   border: 0;
   position: absolute;
-  left: 28%;
-    top: 41%;
+  top: 50%;
 }
+
+.snow-image {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  position: absolute;
+  bottom: 0; /* Align the image to the bottom */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+/* .button-home {
+  background: #355e73;;
+  border-radius: 999px;
+  box-shadow: 0 0 20px 0px #355e73;
+
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 13px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 200px;
+  word-break: break-word;
+  border: 0;
+
+} */
