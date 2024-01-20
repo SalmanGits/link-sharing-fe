@@ -49,7 +49,7 @@ const Home = () => {
         <div className="parent">
             <div className="main-content">
                 {/* <p className="wonderland-p">Wonderland</p> */}
-                <button className="button-home">Get Started</button>
+                <button onClick={() => navigate("/name")} className="button-home">Get Started</button>
                 <img className='snow-image' src={snow} alt="snow" />
             </div>
 

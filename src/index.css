@@ -196,6 +196,28 @@ textarea {
   border: 0;
   position: absolute;
   top: 40%;
+  cursor: pointer;
+  z-index: 1000;
+}
+.button-home1 {
+  background: #355e73;
+  border-radius: 999px;
+  box-shadow: 0 0 20px 0px #355e73;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 13px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 200px;
+  word-break: break-word;
+  border: 0;
+
 }
 
 .snow-image {
@@ -207,7 +229,82 @@ textarea {
   left: 50%;
   transform: translateX(-50%);
 }
+.name-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  font-weight: 600;
+  font-size:30px;
+  gap: 10px;
+  background: linear-gradient(to bottom, #8fa9b5, #adc2cc,#c2d9e4);
 
+}
+.name-content p{
+  color: white;
+  font-weight: bold;
+  /* font-weight: 700; */
+}
+.p{
+  margin-top: -21px;
+}
+.input-container input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+
+  outline: none;
+  background-color: transparent;
+  color: #fff; 
+  font-size:30px;
+}
+::placeholder {
+  color: grey;
+  text-align: center;
+  font-weight: 500;
+}
+/* .wrapper {
+  border: 3px solid blue;
+} */
+
+.container {
+  background-color: grey;
+  height: 5px;
+  border-radius:10000;
+}
+
+.barCompleted {
+  background-color: #243c47;
+  width: 50%;
+  height: 5px;
+  border-radius:10000;
+
+}
+
+.label {
+  font-size: 20px;
+  color: green;
+}
+.progress-parent{
+  height: 50px;
+  background: linear-gradient(to bottom, #5b7c8d, #4c6c79,#6999b1);
+}
+/* .input-container::before {
+  content: attr(placeholder);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #a0a0a0; 
+  transition: color 0.3s ease;
+} */
+
+.input-container input:focus +::before,
+.input-container input:valid +::before {
+  color: white; /* Color when focused or input is not empty */
+}
 
 /* .button-home {
   background: #355e73;;
