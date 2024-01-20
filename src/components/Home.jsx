@@ -14,7 +14,7 @@ const Home = () => {
         try {
             const response = await axios.post(`${url}/create-link`);
             setLink(`https://feelshare.netlify.app/form/${response.data.linkId}`);
-            localStorage.setItem("link", `htpps://localhost/form/${response.data.linkId}`);
+            localStorage.setItem("link", `https://feelshare.netlify.app/form/${response.data.linkId}`);
         } catch (error) {
             console.error('Error creating link:', error);
         }
