@@ -195,7 +195,7 @@ textarea {
   word-break: break-word;
   border: 0;
   position: absolute;
-  top: 45%;
+  top: 40%;
 }
 
 .snow-image {
@@ -203,7 +203,7 @@ textarea {
   max-width: 275px;
   height: auto;
   position: absolute;
-  bottom: 15%;
+  bottom: 12%;
   left: 50%;
   transform: translateX(-50%);
 }
