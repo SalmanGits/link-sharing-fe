@@ -46,14 +46,22 @@ const Home = () => {
     const sharingLink = link ? link : link1
     console.log(sharingLink)
     return (
-        <div className="parent">
-            <div className="main-content">
-                {/* <p className="wonderland-p">Wonderland</p> */}
-                <button onClick={() => navigate("/name")} className="button-home">Get Started</button>
-                <img className='snow-image' src={snow} alt="snow" />
-            </div>
+        <>
 
-            {/* <div className="card">
+            <div className='buttons' style={{ display: "flex", justifyContent: "space-between" }}>
+                <button onClick={() => navigate("/login")} className='form-button'>Login</button>
+                <button onClick={() => navigate("/responses")} className='form-button'>Responses</button>
+
+            </div>
+            <div className="parent">
+
+                <div className="main-content">
+                    {/* <p className="wonderland-p">Wonderland</p> */}
+                    <button onClick={() => navigate("/name")} className="button-home">Get Started</button>
+                    <img className='snow-image' src={snow} alt="snow" />
+                </div>
+
+                {/* <div className="card">
 
                 <div className="card-content">
                     <p>{message}</p>
@@ -82,7 +90,8 @@ const Home = () => {
                 </div>
 
             </div> */}
-        </div>
+            </div>
+        </>
     )
 }
 

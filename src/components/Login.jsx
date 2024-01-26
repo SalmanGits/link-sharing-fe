@@ -12,23 +12,27 @@ import {
 
 import axios from "axios";
 import { url } from "./service";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 
 
 
-const Form = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        paragraph: '',
-        like: '',
-        dislike: ''
-    });
+const Login = ({ sign }) => {
+    let obj = sign ? {
+        name: "",
+        email: '',
+        password: '',
+
+    } : {
+        email: '',
+        password: '',
+    }
+    const [formData, setFormData] = useState(obj);
     const { id } = useParams()
     console.log(id)
     const [checked, setIsChecked] = useState(false)
     const navigate = useNavigate()
-    const fieldOrder = ['name', 'paragraph', 'like', 'dislike'];
+    const fieldOrder = sign ? ['name', 'email', 'password'] : ['email', 'password'];
 
     const handleChange = (e, fieldName) => {
         const { value } = e.target;
@@ -86,9 +90,10 @@ const Form = () => {
                     <CarouselNext />
                 </Carousel>
             </div>
-            <button onClick={() => navigate("/thank")} className="form-button new">Submit</button>
+            <button onClick={handleSubmit} className="form-button new">Submit</button>
+            {sign ? <Link to="/login">have an account?log in</Link> : <Link to="/signup">Dont have an account?sign up</Link>}
         </div>
     );
 };
 
-export default Form;
+export default Login;
