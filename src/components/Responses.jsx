@@ -60,7 +60,7 @@ const Responses = () => {
                 Go to Home
             </button>
             {/* <h1 className="text-center mt-5">Responses</h1> */}
-            {submissions.length ? (
+            {submissions1.length ? (
                 <div className="table-container">
                     {submissions1.map((submission) => (
                         <animated.div key={submission._id} className="card-h" style={{ ...style }}>
