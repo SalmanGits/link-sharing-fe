@@ -38,22 +38,22 @@ const Responses = () => {
     ];
     const navigate = useNavigate()
 
-    const parts = new URL(link).pathname.split('/');
-    const lastSegment = parts.pop() || parts.pop(); // Get the last segment or the previous one if it's empty
+    // const parts = new URL(link).pathname.split('/');
+    // const lastSegment = parts.pop() || parts.pop(); 
 
-    console.log(lastSegment);
-    useEffect(() => {
-        const fetchSubmissions = async () => {
-            try {
-                const response = await axios.get(`${url}/submissions/${lastSegment}`);
-                setSubmissions(response.data);
-            } catch (error) {
-                console.error('Error fetching submissions:', error);
-            }
-        };
+    // console.log(lastSegment);
+    // useEffect(() => {
+    //     const fetchSubmissions = async () => {
+    //         try {
+    //             const response = await axios.get(`${url}/submissions/${lastSegment}`);
+    //             setSubmissions(response.data);
+    //         } catch (error) {
+    //             console.error('Error fetching submissions:', error);
+    //         }
+    //     };
 
-        fetchSubmissions();
-    }, [lastSegment]);
+    //     fetchSubmissions();
+    // }, [lastSegment]);
     return (
         <div>
             <button onClick={() => navigate('/')} className="form-button" style={{ width: "200px" }}>
