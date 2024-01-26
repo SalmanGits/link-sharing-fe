@@ -62,7 +62,7 @@ const Form = () => {
     return (
         <div className="form-container">
             <div className="carousel-container">
-                <Carousel className="w-full max-w-xs">
+                <Carousel className="w-full max-w-xs small-car">
                     <CarouselContent>
                         {fieldOrder.map((fieldName, index) => (
                             <CarouselItem key={index}>

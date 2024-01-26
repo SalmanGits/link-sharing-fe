@@ -357,5 +357,6 @@ textarea {
   border: none !important;
 
 }
-
-
+.small-car{
+  max-width: 19rem !important;
+}
