@@ -3,7 +3,7 @@ import Home from "./components/Home.jsx"
 import Form from "./components/Form.jsx"
 import Responses from "./components/Responses.jsx";
 import Name from "./components/Name.jsx";
-
+import "./App.css"
 function App() {
 
 

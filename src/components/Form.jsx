@@ -1,6 +1,15 @@
 import { useState } from "react";
 
-import Switch from "react-switch";
+import { Card, CardContent } from "@/components/ui/card"
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel"
+
+
 import axios from "axios";
 import { url } from "./service";
 import { useNavigate, useParams } from "react-router-dom";
@@ -19,14 +28,16 @@ const Form = () => {
     console.log(id)
     const [checked, setIsChecked] = useState(false)
     const navigate = useNavigate()
+    const fieldOrder = ['name', 'paragraph', 'like', 'dislike'];
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
+    const handleChange = (e, fieldName) => {
+        const { value } = e.target;
         setFormData({
             ...formData,
-            [name]: value
+            [fieldName]: value
         });
     };
+
     const handleToggleChange = () => {
         setIsChecked(!checked)
 
@@ -46,69 +57,36 @@ const Form = () => {
         }
 
     };
+    console.log(formData)
 
     return (
         <div className="form-container">
-            <form className="contact-form" onSubmit={handleSubmit}>
-                <label htmlFor="name">Your Name</label>
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Enter your name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                />
-                <div className="span-parent">
-                    <span>Keep it anonymous</span>
-                    <Switch onChange={handleToggleChange} checked={checked} />
-                </div>
-
-
-                {/* <label htmlFor="anonymous">Your Anonymous name<span>(we will show this name to them)</span></label>
-                <input
-                    type="anonymous"
-                    id="anonymous"
-                    name="anonymous"
-                    placeholder="Enter your anonymous name"
-                    value={formData.anonymous}
-                    onChange={handleChange}
-                    required
-                /> */}
-                <label htmlFor="like">Things You Like About Them</label>
-                <input
-                    type="text"
-                    id="like"
-                    name="like"
-                    placeholder="Enter here"
-                    value={formData.like}
-                    onChange={handleChange}
-                    required
-                />
-                <label htmlFor="dislike">Things You Like About Them</label>
-                <input
-                    type="text"
-                    id="dislike"
-                    name="dislike"
-                    placeholder="Enter here"
-                    value={formData.dislike}
-                    onChange={handleChange}
-                    required
-                />
-
-                <label htmlFor="paragraph">Write something about them</label>
-                <textarea
-                    id="paragraph"
-                    name="paragraph"
-                    placeholder="Enter your paragraph"
-                    value={formData.paragraph}
-                    onChange={handleChange}
-                    required
-                ></textarea>
-
-                <button className="form-button" type="submit" onClick={handleSubmit}>Submit</button>
-            </form>
+            <div className="carousel-container">
+                <Carousel className="w-full max-w-xs">
+                    <CarouselContent>
+                        {fieldOrder.map((fieldName, index) => (
+                            <CarouselItem key={index}>
+                                <div className="p-1">
+                                    <Card className="my-card">
+                                        <CardContent className="flex aspect-square items-center justify-center p-6">
+                                            <input
+                                                type="text"
+                                                className="text-4xl font-semibold w-60 h-16 text-center input-form"
+                                                placeholder={`Enter ${fieldName}`}
+                                                value={formData[fieldName]}
+                                                onChange={(e) => handleChange(e, fieldName)}
+                                            />
+                                        </CardContent>
+                                    </Card>
+                                </div>
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                    <CarouselPrevious />
+                    <CarouselNext />
+                </Carousel>
+            </div>
+            <button className="form-button new">Submit</button>
         </div>
     );
 };
