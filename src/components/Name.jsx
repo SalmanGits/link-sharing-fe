@@ -1,7 +1,8 @@
 
 import ProgressBar from "@ramonak/react-progress-bar";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 const Name = () => {
+    const {id} = useParams()
     const navigate = useNavigate()
     return (
         <div className="name-parent">
@@ -25,7 +26,7 @@ const Name = () => {
                 </div>
 
 
-                <button onClick={()=>navigate("/form/1")} className="button-home1">Next</button>
+                <button onClick={()=>navigate(`/form/${id}`)} className="button-home1">Next</button>
             </div>
         </div>
     )

@@ -29,7 +29,7 @@
     position: relative;
 }
 .card {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 50vh;
@@ -38,18 +38,18 @@
   background-color: #858666;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  overflow: hidden;
+  overflow: hidden; */
 }
 
 .card-content {
 
-  padding: 20px;
+  /* padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50vh;
   flex-direction: column;
-  gap: 14px;
+  gap: 14px; */
 }
 .card-content p{
   color: red;
@@ -129,7 +129,7 @@ textarea {
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
-  width: 100px;
+  width: 150px;
 }
 
 .form-button:hover {

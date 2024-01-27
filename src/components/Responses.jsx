@@ -11,8 +11,8 @@ const Responses = () => {
         },
         transform: "rotateY(25deg)"
     });
-    const link = localStorage.getItem("link")
-    const [submissions, setSubmissions] = useState("")
+    const token = localStorage.getItem("token")
+    const [submissions, setSubmissions] = useState([])
     const submissions1 = [
         {
             _id: 1,
@@ -42,27 +42,32 @@ const Responses = () => {
     // const lastSegment = parts.pop() || parts.pop(); 
 
     // console.log(lastSegment);
-    // useEffect(() => {
-    //     const fetchSubmissions = async () => {
-    //         try {
-    //             const response = await axios.get(`${url}/submissions/${lastSegment}`);
-    //             setSubmissions(response.data);
-    //         } catch (error) {
-    //             console.error('Error fetching submissions:', error);
-    //         }
-    //     };
+    useEffect(() => {
+        const fetchSubmissions = async () => {
+            try {
+                const response = await axios.get(`${url}/submissions`, {
+                    headers: {
+                        Authorization: token
+                    }
+                });
+                console.log(response);
+                setSubmissions(response.data);
+            } catch (error) {
+                console.error('Error fetching submissions:', error);
+            }
+        };
 
-    //     fetchSubmissions();
-    // }, [lastSegment]);
+        fetchSubmissions();
+    }, []);
     return (
         <div>
             <button onClick={() => navigate('/')} className="form-button" style={{ width: "200px" }}>
                 Go to Home
             </button>
             {/* <h1 className="text-center mt-5">Responses</h1> */}
-            {submissions1.length ? (
+            {submissions.length ? (
                 <div className="table-container">
-                    {submissions1.map((submission) => (
+                    {submissions.map((submission) => (
                         <animated.div key={submission._id} className="card-h" style={{ ...style }}>
                             <p>{submission?.name}</p>
                             <p>{submission?.paragraph}</p>
