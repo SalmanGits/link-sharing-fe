@@ -55,6 +55,7 @@ const Home = () => {
 
     // const sharingLink = link ? link : link1
     // console.log(sharingLink)
+    console.log(token)
     return (
         <>
 
@@ -92,7 +93,7 @@ const Home = () => {
 
                 <div className="main-content">
                     {/* <p className="wonderland-p">Wonderland</p> */}
-                    {token.token ? <button onClick={() => navigate("/login")} className="button-home">Get Started</button> : ""}
+                    {token ? "" : <button onClick={() => navigate("/login")} className="button-home">Get Started</button>}
                     <img className='snow-image' src={snow} alt="snow" />
                 </div>
 
