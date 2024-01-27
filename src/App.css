@@ -417,3 +417,13 @@ textarea {
 }
 
 
+.p-center{
+  font-weight: bold;
+  font-size:20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  height: 55vh;
+}
+
