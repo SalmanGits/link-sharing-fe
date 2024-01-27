@@ -50,7 +50,7 @@ const Form = () => {
         try {
             await axios.post(`${url}/submit-form/${id}`, { ...formData, anonymous: checked });
             alert("Your response was submitted")
-            navigate("/")
+            navigate("/thank")
 
         } catch (error) {
             console.error('Error submitting form:', error);
@@ -86,7 +86,7 @@ const Form = () => {
                     <CarouselNext />
                 </Carousel>
             </div>
-            <button onClick={() => navigate("/thank")} className="form-button new">Submit</button>
+            <button onClick={handleSubmit} className="form-button new">Submit</button>
         </div>
     );
 };
